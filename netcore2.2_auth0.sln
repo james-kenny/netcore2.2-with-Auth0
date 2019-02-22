@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netcore2.2_auth0", "netcore2.2_auth0\netcore2.2_auth0.csproj", "{58D3895E-B038-4A5E-BC0E-D9D1AD66EF86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netcore2.2_auth0", "netcore2.2_auth0\netcore2.2_auth0.csproj", "{58D3895E-B038-4A5E-BC0E-D9D1AD66EF86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{23A8F6EA-4EEB-4F07-83FA-CC56E1502D99}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
