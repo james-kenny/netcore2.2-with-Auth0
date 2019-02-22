@@ -79,7 +79,7 @@ namespace netcore2._2_auth0
             OnRedirectToIdentityProviderForSignOut = (context) =>
             {
               var logoutUri =
-                $"https://AUTH0-DOMAIN/v2/logout?client_id=Kmqrglz32JIS1GBZfg3beJ3k2FBH77Sa";
+                $"https://AUTH0-DOMAIN/v2/logout?client_id=AUTH0-CLIENTID";
 
               var postLogoutUri = context.Properties.RedirectUri;
               if (!string.IsNullOrEmpty(postLogoutUri))
