@@ -44,11 +44,11 @@ namespace netcore2._2_auth0
         .AddOpenIdConnect("Auth0", options =>
         {
           // Set the authority to your Auth0 domain
-          options.Authority = $"AUTH0 - Domain";
+          options.Authority = $"https://contentappco.eu.auth0.com";
 
           // Configure the Auth0 Client ID and Client Secret
-          options.ClientId = "AUTH0 - ClientID";
-          options.ClientSecret = "AUTH0 - Client Secret";
+          options.ClientId = "Kmqrglz32JIS1GBZfg3beJ3k2FBH77Sa";
+          options.ClientSecret = "uyquzDdbsoW5nYnWA06lmtcWI_fl6LdwP6jC1plosp7iuZS72l65b95DifQNU-qi";
 
           // Set response type to code
           options.ResponseType = "code";
@@ -63,11 +63,12 @@ namespace netcore2._2_auth0
 
           // Configure the Claims Issuer to be Auth0
           options.ClaimsIssuer = "Auth0";
+
           options.Events = new OpenIdConnectEvents
           {
             OnRedirectToIdentityProvider = context =>
             {
-              context.ProtocolMessage.SetParameter("audience", "AUTH0 - API ID");
+              context.ProtocolMessage.SetParameter("audience", "5ac2295df4307b4e904d5bb9");
 
               return Task.FromResult(0);
             }
@@ -79,7 +80,7 @@ namespace netcore2._2_auth0
             OnRedirectToIdentityProviderForSignOut = (context) =>
             {
               var logoutUri =
-                $"https://AUTH0-DOMAIN/v2/logout?client_id=AUTH0-CLIENTID";
+                $"https://contentappco.eu.auth0.com/v2/logout?client_id=Kmqrglz32JIS1GBZfg3beJ3k2FBH77Sa";
 
               var postLogoutUri = context.Properties.RedirectUri;
               if (!string.IsNullOrEmpty(postLogoutUri))
